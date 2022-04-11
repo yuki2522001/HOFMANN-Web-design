@@ -1,0 +1,51 @@
+@use "variables" as *;
+
+// screen tablet
+@mixin tablet {
+  @media screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+// screen desktop
+@mixin desktop {
+  @media screen and (min-width: $extra-lager) {
+    @content;
+  }
+}
+
+// set font-size, line-heigh and letter-spacing
+@mixin text-size {
+  font-size: 44px;
+  line-height: 48px;
+  letter-spacing: -1.6px;
+}
+
+// set percent circle progress bar
+@mixin percent ($number1, $number2) {
+  stroke-dashoffset: ($number1 - ($number1 * $number2) / 100);
+}
+
+// set size circle progress bar
+@mixin size-medium {
+  stroke: $color-circle-border;
+  stroke-width: 1;
+}
+
+@mixin size-extra-lager {
+  stroke: $color-circle-border;
+  stroke-width: 3;
+}
+
+// set font
+@mixin font($input,$font) {
+  @font-face {
+    font-family: $font;
+    src: url('/src/assets/fonts/'+ $input +'/'+ $font +'.eot'); // IE9+
+    src: url('/src/assets/fonts/'+ $input +'/'+ $font +'.eot?#iefix') format('embedded-opentype'), // IE6-IE8
+         url('/src/assets/fonts/'+ $input +'/'+ $font +'.woff2') format('woff2'), // Super modern browsers
+         url('/src/assets/fonts/'+ $input +'/'+ $font +'.woff') format('woff'), // Modern browsers
+         url('/src/assets/fonts/'+ $input +'/'+ $font +'.ttf') format('truetype'), // Safari, Android, iOS >
+         url('/src/assets/fonts/'+ $input +'/'+ $font +'.svg#svgFontName') format('svg'); // < iOS from 4.1
+  }
+}

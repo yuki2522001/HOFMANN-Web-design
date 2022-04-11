@@ -1,0 +1,138 @@
+@use "../abstracts/all" as *;
+.card {
+  border-radius: pxToRem(8px);
+  width: 140px;
+  text-align: center;
+  margin-bottom: pxToRem(16px);
+  background-color: $color-heading;
+  box-shadow: 0px 2px 4px $color-box-shadow;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  &__info{
+    border-radius: 8px 8px 0 0;
+    padding: pxToRem(10px) 0 pxToRem(3px);
+    
+    &--fremium{
+      background: url(/src/assets/images/freemium.png) no-repeat top;
+      background-size: cover;
+    }
+
+    &--starup{
+      background: url(/src/assets/images/startup.png) no-repeat top;
+      background-size: cover;
+    }
+
+    &--business{
+      background: url(/src/assets/images/business.png) no-repeat top;
+      background-size: cover;
+    }
+
+    &--enterrprise{
+      background: url(/src/assets/images/enterprise.png) no-repeat top;
+      background-size: cover;
+    }
+  }
+
+  &__description {
+    padding-bottom: pxToRem(24px);
+  }
+
+  &__content{
+    padding: pxToRem(25px) pxToRem(10px) pxToRem(10px);
+  }
+
+  &__text{
+    font-family: $primary-font;
+    font-size: pxToRem(11px);
+    line-height: pxToRem(16px);
+  }
+
+  &__name{
+    font-family: $primary-font;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: pxToRem(12px);
+    line-height: pxToRem(35px);
+    letter-spacing: 1.5px;
+    color: $color-heading;
+  }
+
+  &__unit{
+    display: flex;
+    justify-content: center;
+    font-size: pxToRem(11px);
+    line-height: pxToRem(20px);
+    color: $color-heading;
+    letter-spacing: pxToRem(2px);
+  }
+
+  &__price{
+    font-size: pxToRem(36px);
+    line-height: pxToRem(35px);
+    color: $color-heading;
+  }
+}
+
+@include tablet {
+  .card {
+    width: 158px;
+    margin: 0;
+
+    &__description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 120px;
+      padding: pxToRem(20px) pxToRem(15px) pxToRem(24px);
+    }
+
+    &__content{
+      padding: 0;
+    }
+
+    &__text {
+      line-height: pxToRem(18px);
+    }
+  }
+}
+
+@include desktop {
+  .card {
+    width: 262px;
+    &__info{
+      padding: pxToRem(30px) 0 pxToRem(20px);
+    }
+
+    &__description {
+      height: 180px;
+      padding: pxToRem(30px) pxToRem(25px) pxToRem(35px);
+    }
+
+    &__text{
+      font-size: pxToRem(16px);
+      line-height: pxToRem(26px);
+    }
+
+    &__name{
+      font-size: pxToRem(18px);
+      letter-spacing: 1px;
+    }
+
+    &__unit{
+      align-items: center;
+      font-size: pxToRem(24px);
+    }
+
+    &__price{
+      font-size: pxToRem(64px);
+      line-height: pxToRem(65px);
+    }
+  }
+
+  .card:hover {
+    box-shadow: 0px pxToRem(8px) pxToRem(16px) $color-border;
+    transition: 0.5s;
+  }
+}

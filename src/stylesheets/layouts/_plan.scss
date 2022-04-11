@@ -1,0 +1,40 @@
+@use "../abstracts/all" as *;
+.plan{
+  background-color: $background-color;
+  &__title{
+    padding: pxToRem(25px) 0 pxToRem(15px);
+    text-align: center;
+    font-size: pxToRem(20px);
+    line-height: pxToRem(40px);
+  }
+
+  &__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: pxToRem(48px);
+  }
+}
+
+@include tablet {
+  .plan{  
+    &__title{
+      font-size: pxToRem(32px);
+      line-height: pxToRem(40px);
+    }
+
+    &__list{
+      justify-content: space-between;
+    }
+  }
+}
+
+@include desktop {
+  .plan{  
+    &__title{
+      padding: pxToRem(60px) 0;
+      @include text-size;
+    }
+  }
+}

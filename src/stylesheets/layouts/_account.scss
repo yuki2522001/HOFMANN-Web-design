@@ -1,0 +1,42 @@
+@use "../abstracts/all" as *;
+.account {
+  background: url('/src/assets/images/backgrounds/mountain.png') no-repeat center center;
+  background-size: cover;
+  padding-bottom: 7%;
+  > .container {
+    padding: 0 0 pxToRem(35px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__heading {
+    padding: pxToRem(45px) 0 pxToRem(20px);
+    font-size: pxToRem(20px);
+    line-height: pxToRem(40px);
+    letter-spacing: -0.5px;
+    color: $color-heading;
+  }
+}
+
+@include tablet {
+  .account {
+    padding-bottom: 0;
+    &__heading {
+      font-size: pxToRem(32px);
+      line-height: pxToRem(40px);
+    }
+  }
+}
+
+@include desktop {
+  .account {
+    padding-bottom: 2%;
+    &__heading {
+      padding: pxToRem(45px) 0 pxToRem(36px);
+      @include text-size;
+    }
+  }
+}
+

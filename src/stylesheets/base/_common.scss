@@ -1,0 +1,22 @@
+@use "../abstracts/all" as *;
+
+@include font('SourceSansPro',$primary-font);
+@include font('Montserrat',$secondary-font);
+
+.container {
+  max-width: 290px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@include tablet {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@include desktop {
+  .container {
+    max-width: 1140px;
+  }
+}

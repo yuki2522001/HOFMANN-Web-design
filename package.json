@@ -1,0 +1,16 @@
+{
+  "name": "practice-2",
+  "version": "1.0.0",
+  "description": "Hofmann web design",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx parcel src/page/index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.1.1",
+    "parcel": "^2.1.1"
+  }
+}

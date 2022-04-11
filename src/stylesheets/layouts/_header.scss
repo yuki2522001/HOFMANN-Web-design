@@ -1,0 +1,75 @@
+@use "../abstracts/all" as *;
+.main {
+  background: url('/src/assets/images/backgrounds/banner.png') no-repeat;
+  background-size: cover;
+  background-position: 85%;
+
+  &__info {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__title, &__text {
+    color: $color-heading;
+  }
+
+  &__content {
+    max-width: 190px;
+    margin-bottom: pxToRem(110px);
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: pxToRem(20px);
+    line-height: pxToRem(24px);
+    padding-top: pxToRem(55px);
+    letter-spacing: -0.8px;
+  }
+
+  &__text {
+    font-size: pxToRem(11px);
+    line-height: pxToRem(16px);
+    padding: pxToRem(15px) 0 pxToRem(20px);
+  }
+}
+
+@include tablet {
+  .main {
+    &__content {
+      max-width: 347px;
+      margin-bottom: pxToRem(173px);
+    }
+
+    &__title {
+      padding-top: pxToRem(123px);
+      font-size: pxToRem(32px);
+      line-height: pxToRem(36px);
+    }
+
+    &__text {
+      font-size: pxToRem(11px);
+      line-height: pxToRem(16px);
+      padding: pxToRem(17px) 0 pxToRem(22px);
+    }
+  }
+}
+
+@include desktop {
+  .main {
+    &__content {
+      max-width: 520px;
+    }
+
+    &__title {
+      padding-top: pxToRem(62px);
+      @include text-size;
+    }
+
+    &__text {
+      padding: 30px 0;
+      font-size: pxToRem(16px);
+      line-height: pxToRem(24px);
+    }
+  }
+}

@@ -1,0 +1,198 @@
+@use "../abstracts/all" as *;
+.feature {
+  &__img {
+    &--desktop {
+      display: block;
+      right: 72px;
+      z-index: -5;
+      > img {
+        width: 290px;
+        height: 168.32px;
+      }
+    }
+  }
+
+  &__heading {
+    text-align: center;
+    padding: pxToRem(28px) 0;
+  }
+
+  &-heading {
+    &__title {
+      font-size: pxToRem(20px);
+      line-height: pxToRem(40px);
+      letter-spacing: -0.5px;
+    }
+  }
+
+  &__text {
+    font-size: pxToRem(11px);
+    line-height: pxToRem(30px);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    display: flex;
+    padding-bottom: pxToRem(40px);
+    &--responsive{
+      width: 38.55px;
+      height: 36px;
+      padding: 0 pxToRem(17px) 0 pxToRem(15px);
+    }
+
+    &--diamond {
+      width: 35.8px;
+      height: 26.89px;
+      padding: 0 pxToRem(14px) 0 pxToRem(20px);
+    }
+
+    &--layers {
+      width: 30px;
+      height: 33px;
+      padding: 0 pxToRem(16px) 0 pxToRem(23px);
+    }
+  }
+  
+  &__title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: pxToRem(11px);
+    line-height: pxToRem(15px);
+    letter-spacing: 1.5px;
+  }
+
+  &__content {
+    padding-top: 8px;
+    max-width: 190px;
+    font-weight: pxToRem(300px);
+    font-size: pxToRem(11px);
+    line-height: pxToRem(16px);
+  }
+}
+
+@include tablet {
+  .feature {
+    &__img {
+      display: flex;
+      padding-bottom: pxToRem(80px);
+      background: url('/src/assets/images/mac_tablet.png') no-repeat bottom right;
+      &--desktop {
+        display: none;
+      }
+    }
+
+    &__list {
+        margin: pxToRem(50px) 0 0 pxToRem(10px);
+      }
+
+    &__heading {
+      padding: pxToRem(28px) 0 0;
+    }
+
+    &-heading {
+      &__title {
+        padding: pxToRem(40px) 0 pxToRem(15px);
+        font-size: pxToRem(32px);
+      }
+    }
+
+    &__item {
+      &--responsive {
+        width: 40px;
+        height: 37px;
+      }
+
+      &--diamond {
+        width: 36px;
+        height: 33px;
+      }
+
+      &--layers {
+        width: 31px;
+        height: 38px;
+      }
+    }
+
+    &__content {
+      padding-top: pxToRem(20px);
+      max-width: 220.00px;
+    }
+  }
+}
+
+@include desktop {
+  .feature {
+      display: flex;
+    &__img {
+      background: none;
+      position: relative;
+      &--desktop {
+        display: block;
+        position: absolute;
+        right: 72px;
+        z-index: -5;
+        > img {
+          width: 770px;
+          height: 500px;
+        }
+      }
+    }
+
+    &__list {
+      margin: pxToRem(30px) 0 0 pxToRem(10px);
+    }
+
+    &__heading {
+      padding: pxToRem(35px) 0;
+    }
+
+    &-heading {
+      &__title {
+        @include text-size;
+        padding: pxToRem(40px) 0 pxToRem(20px);
+      }
+    }
+
+    &__text {
+      font-size: pxToRem(18px);
+      line-height: pxToRem(30px);
+      letter-spacing: 1px;
+    }
+
+    &__item {
+      padding-bottom: pxToRem(20px);
+      &--responsive {
+        width: 52px;
+        height: 44px;
+        padding: pxToRem(10px) pxToRem(20px) 0 0;
+      }
+
+      &--diamond {
+        width: 44.12px;
+        height: 37.82px;
+        padding: pxToRem(10px) pxToRem(24px) 0 5px;
+      }
+
+      &--layers {
+        width: 34.8px;
+        height: 47.07px;
+        padding: pxToRem(10px) pxToRem(28px) 0 10px;
+      }
+    }
+
+    &__title {
+      font-size: pxToRem(16px);
+      line-height: pxToRem(30px);
+      letter-spacing: 0.89px;
+    }
+
+    &__content {
+      font-size: pxToRem(16px);
+      line-height: pxToRem(24px);
+      margin: pxToRem(15px) 0 pxToRem(34px);
+      max-width: 270px;
+      padding: 0;
+    }
+  }
+}

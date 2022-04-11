@@ -1,0 +1,56 @@
+@use "../abstracts/all" as *;
+.input {
+  &--info {
+  margin-top: pxToRem(15px);
+  padding-left: pxToRem(15px);
+  min-width: 77%;
+  font-size: pxToRem(10px);
+  height: 30px;
+  background: $color-heading;
+  opacity: 0.8;
+  border: 1px solid $color-border;
+  border-radius: 4px;
+}
+
+  &--contact {
+  border: pxToRem(0.53px) solid $background-form-color;
+  border-radius: 2.13px;
+  max-width: 90px;
+  padding: pxToRem(4px) pxToRem(7px);
+  font-size: pxToRem(9px);
+  line-height: 14px;
+  margin-right: pxToRem(5px);
+  }
+}
+
+@include tablet {
+  .input {
+    &--info {
+      margin-top: pxToRem(12px);
+      min-width: 70%;
+    }
+    &--contact {
+      max-width: 100px;
+      padding: pxToRem(6px) pxToRem(8px);
+    }
+  }
+}
+
+@include desktop {
+  .input {
+    &--info {
+      margin-top: pxToRem(25px);
+      padding-left: pxToRem(15px);
+      font-size: pxToRem(13px);
+      min-width: 70%;
+      height: 36px;
+    }
+    &--contact {
+      height: 45px;
+      padding: pxToRem(0px) pxToRem(65px) 0 pxToRem(20px);
+      font-size: pxToRem(16px);
+      line-height: pxToRem(27px);
+      margin-right: pxToRem(10px);
+    }
+  }
+}

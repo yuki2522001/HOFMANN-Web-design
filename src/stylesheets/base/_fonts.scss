@@ -1,0 +1,19 @@
+@use "../abstracts/variables";
+
+// font  Source-Sans-Pro
+body{
+  font-family: variables.$primary-font;
+}
+
+// font  Montserrat
+.account__heading,
+.feature__heading,
+.nav__title,
+.main__title,
+.plan__title,
+.card__unit,
+.card__price,
+.results__title,
+.cricle__number{
+  font-family: variables.$secondary-font;
+}

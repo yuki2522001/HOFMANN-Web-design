@@ -1,0 +1,42 @@
+@use "../abstracts/all" as *;
+.icon {
+  width: 23px;
+  height: 18px;
+  margin: 0 pxToRem(15px);
+  display: inline-block;
+  background-image: url("/src/assets/images/icons/css_sprites_mobile.png");
+
+  &--fb {
+    background-position: pxToRem(-53px) pxToRem(-10px);
+  }
+
+  &--pinterest {
+    background-position: pxToRem(-10px) pxToRem(-48px);
+  }
+
+  &--twitter {
+    background-position: pxToRem(-10px) pxToRem(-10px);
+  }
+}
+
+@include tablet {
+  .icon {
+    margin: 0 0 0 pxToRem(30px);
+  }
+}
+
+@include desktop {
+  .icon {
+    width: 44px;
+    height: 35px;
+    background-image: url("/src/assets/images/icons/css_sprites.png");
+  
+    &--fb {
+      background-position: pxToRem(-80px) pxToRem(-10px);
+    }
+
+    &--pinterest {
+      background-position: pxToRem(-10px) pxToRem(-75px);
+    }
+  }
+}

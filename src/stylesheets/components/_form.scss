@@ -1,0 +1,50 @@
+@use "../abstracts/all" as *;
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: pxToRem(24px) 0 pxToRem(35px);
+  width: 262.59px;
+  align-items: center;
+  background: $background-form-color;
+  box-shadow: 0px 8px 16px $color-box-shadow;
+  border-radius: pxToRem(8px);
+
+  &__signup {
+    font-size: pxToRem(13.5px);
+    line-height: pxToRem(22.5px);
+    letter-spacing: 1.4px;
+    color: $color-primary;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    font-size: pxToRem(11px);
+    line-height: pxToRem(24px);
+    padding: pxToRem(12px) 0 pxToRem(15px);
+    color: $color-primary;
+  }
+}
+
+@include tablet {
+  .form {
+    width: 278px;
+    &__link {
+      padding: pxToRem(22px);
+    }
+  }
+}
+
+@include desktop {
+  .form {
+    width: 360px;
+    &__signup {
+      font-size: pxToRem(18px);
+      line-height: pxToRem(27px);
+    }
+  
+    &__link {
+      font-size: pxToRem(16px);
+      padding: pxToRem(27px) 0 pxToRem(19px);
+    }
+  }
+}

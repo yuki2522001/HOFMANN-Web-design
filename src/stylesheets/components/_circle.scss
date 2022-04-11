@@ -1,0 +1,155 @@
+@use "../abstracts/all" as *;
+.cricle {
+  text-align: center;
+  &__info {
+    padding: pxToRem(20px) 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__percent {
+    position: relative;
+    &-74-98 {
+      circle:nth-child(1) {
+        @include size-medium;
+      }
+      circle:nth-child(2) {
+        @include percent(-315, 74.98);
+        stroke: $color-primary;
+      }
+      circle:nth-child(3) {
+        @include size-extra-lager;
+      }
+      circle:nth-child(4) {
+        @include percent(-510, 74.98);
+        stroke: $color-primary;
+      }
+    }
+
+    &-39-75 {
+      circle:nth-child(1) {
+        @include size-medium;
+      }
+      circle:nth-child(2) {
+        @include percent(-315, 39.75);
+          stroke: $color-primary;
+      }
+      circle:nth-child(3) {
+        @include size-extra-lager;
+      }
+      circle:nth-child(4) {
+        @include percent(-510, 39.75);
+        stroke: $color-primary;
+      }
+    }
+
+    &-81-15 {
+      circle:nth-child(1) {
+        @include size-medium;
+      }
+      circle:nth-child(2) {
+        @include percent(-315, 81.15);
+          stroke: $color-primary;
+      }
+      circle:nth-child(3) {
+        @include size-extra-lager;
+      }
+      circle:nth-child(4) {
+        @include percent(-510, 81.15);
+        stroke: $color-primary;
+      }
+    }
+  }
+
+  &__number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      z-index: 5;
+  }
+
+  &__report {
+    font-size: pxToRem(32px); 
+    line-height: pxToRem(22px);
+  }
+
+  &__content {
+    padding: pxToRem(8px) pxToRem(70px) 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: pxToRem(11px);
+    line-height: pxToRem(16px);
+  }
+
+  &__texts {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: pxToRem(12px);
+    line-height: pxToRem(16px);
+    letter-spacing: 1.1px;
+    padding: pxToRem(18px) 0 0;
+  }
+
+  &--medium {
+    fill: none;
+    stroke-width: 4;
+    stroke-dasharray: 315;
+  }
+
+  &--extra-lager {
+    display: none;
+  }
+}
+
+@include tablet {
+  .cricle {
+    display: flex;
+    &__info {
+      display: flex;
+    }
+
+    &__content {
+      padding: pxToRem(8px) pxToRem(40px) pxToRem(27px);
+    }
+  }
+}
+
+@include desktop {
+  .cricle {
+    justify-content: space-around;
+    &__info {
+      justify-content: space-around;
+      width: 262px;
+    }
+
+    &__report {
+      font-size: pxToRem(48px);
+      line-height: pxToRem(42px);
+      letter-spacing: -1.6px;
+    }
+
+    &__content {
+      font-size: pxToRem(16px);
+      line-height: pxToRem(24px);
+      padding: pxToRem(20px) 0 pxToRem(60px);
+    }
+
+    &__texts {
+      font-size: pxToRem(18px);
+      line-height: pxToRem(30px);
+    }
+
+    &--medium {
+      display: none;
+    }
+
+    &--extra-lager {
+      fill: none;
+      display: block;
+      stroke-width: 5;
+      stroke-dasharray: 510;
+    }
+  }
+}
